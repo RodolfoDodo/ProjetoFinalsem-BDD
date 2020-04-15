@@ -24,9 +24,13 @@ namespace google_net.Cammon
             Browser = new BrowserSession(sessionConfigurationForChromeHeadless);
             Browser.ResizeTo(1124, 850);
 
-
-
         }
 
+        [TearDown]
+        public void Finish()
+        {
+            Browser.Dispose();
+        }
+
+        }
     }
-}

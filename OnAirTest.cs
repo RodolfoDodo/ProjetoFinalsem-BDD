@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using Coypu;
 using Coypu.Drivers.Selenium;
 using google_net.Cammon;
@@ -18,8 +19,10 @@ namespace google_net
         {
 
             Browser.Visit("https://www.google.com.br/");
+            Thread.Sleep(3000);
 
             Assert.AreEqual("Google", Browser.Title);
+
         }
     }
 }
